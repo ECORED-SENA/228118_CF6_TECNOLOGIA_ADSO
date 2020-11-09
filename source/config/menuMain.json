@@ -1,0 +1,40 @@
+[
+  {
+    "icon": "fa fa-home",
+    "slug": "external",
+    "title": "Volver al inicio",
+    "path": "index.html"
+  },
+  {
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "intro",
+    "title": "Introducción",
+    "breadcrumb": ["Inicio","intro"],
+    "path": "pages/1-tema.html"
+  },
+  {
+    "id": 2,
+    "icon": "fa fa-file-text",
+    "slug": "diseno",
+    "title": "1. Diseño y construcción de algoritmos",
+    "breadcrumb": ["Inicio","diseno"],
+    "path": "pages/2-tema.html"
+  },
+  {
+    "id": 3,
+    "icon": "fa fa-file-text",
+    "slug": "fundamentos",
+    "title": "2. Fundamentos de programación estructurada en LPP",
+    "breadcrumb": ["Inicio","fundamentos"],
+    "path": "pages/3-tema.html"
+  },
+  {
+    "id": 4,
+    "icon": "fa fa-file-text",
+    "slug": "herramientas",
+    "title": "3. Herramientas para creación y prueba de algoritmos",
+    "breadcrumb": ["Inicio","herramientas"],
+    "path": "pages/4-tema.html"
+  }
+]
