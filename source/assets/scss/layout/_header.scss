@@ -27,7 +27,7 @@
 .page-header-textura{ 
     .page-textura {
         padding: 2rem 1rem;
-        background: url(../images/header/header_pattern.png) scroll bottom center repeat !important;
+        background: url(../images/header/header_pattern.svg) scroll bottom center repeat !important;
         background-repeat: no-repeat!important;
         background-size: cover!important;
         background-position: left center!important;
@@ -85,6 +85,7 @@
 
     margin: 3rem 0;
     position: relative;
+    color: #A14328;
 
     h1 {
         font-size: 1.1*$h1-font-size;

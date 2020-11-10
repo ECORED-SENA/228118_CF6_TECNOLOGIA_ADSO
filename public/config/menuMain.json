@@ -19,7 +19,33 @@
     "slug": "diseno",
     "title": "1. Diseño y construcción de algoritmos",
     "breadcrumb": ["Inicio","diseno"],
-    "path": "pages/2-tema.html"
+    "path": "pages/2-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "diseno",
+        "title": "1.1 Conceptos",
+        "anchor": "conceptos"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "diseno",
+        "title": "1.2 Pasos para el diseño de un algoritmo",
+        "anchor": "pasos"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "diseno",
+        "title": "1.3 Representación de los algoritmos",
+        "anchor": "repre"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "diseno",
+        "title": "1.4 Estructuras de programación",
+        "anchor": "estruc"
+      }
+    ]
   },
   {
     "id": 3,
@@ -27,7 +53,63 @@
     "slug": "fundamentos",
     "title": "2. Fundamentos de programación estructurada en LPP",
     "breadcrumb": ["Inicio","fundamentos"],
-    "path": "pages/3-tema.html"
+    "path": "pages/3-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.1 Primer programa",
+        "anchor": "primer"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.2 Tipos de datos",
+        "anchor": "tipos"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.3 Operadores y expresiones aritméticas",
+        "anchor": "operado"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.4 Operadores relacionales y lógicos",
+        "anchor": "operado1"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.4 Operadores relacionales y lógicos",
+        "anchor": "operado1"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.5 Estructuras básicas de programación",
+        "anchor": "estruc1"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.6 Estructuras cíclicas",
+        "anchor": "estruc2"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.7 Organización de las estructuras en un programa",
+        "anchor": "organiza"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "fundamentos",
+        "title": "2.8 Ejemplo",
+        "anchor": "ejemplo"
+      }
+    ]
   },
   {
     "id": 4,

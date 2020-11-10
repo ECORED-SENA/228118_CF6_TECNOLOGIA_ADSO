@@ -2,81 +2,440 @@
 
     .header-ecored
         h1 2. Fundamentos de programación estructurada en LPP
+    
+    br#primer
 
-    .jumbotron.bg-white
+    .jumbotron.bg-white.shadow
 
         .subtitulo-guion
             h2 2.1 Primer programa
         
         p Para iniciar con la construcción del primer programa en la herramienta LPP es necesario seguir los siguientes procesos:
 
-        .list.align-items-center
+        .list.align-items-start
             .list__item
                 .list__item__icon
-                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid  
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
             .list__txt
-                p.mb-0 Codificación.
-        .list.align-items-center.mt-3
+                .row
+                    .col-12
+                        p #[b Codificación.]
+                        p La Codificación consiste en pasar el algoritmo al lenguaje de programación seleccionado, en este caso el lenguaje es LPP. El primer programa consiste en leer el nombre de una persona y presentar un mensaje personalizado.
+                        img.img-fluid(src="assets/images/pages/img6.png", style="max-width: 100%").img-a1
+                        .row.justify-content-center.mt-5
+                            .col-12.col-md-6
+                                .table-responsive
+                                    table.table.table-bordered.m-0
+                                        thead.thead-dark
+                                            tr
+                                                td.table1
+                                                    p.text-center.text-white.mb-0 #[b Linea]
+                                                td.table1
+                                                    p.text-center.text-white.mb-0 #[b Significado]
+                                        tbody
+                                            tr
+                                                td.table3
+                                                    p Cadena [20] nombre
+                                                td.table3
+                                                    p Antes del inicio se deben declarar todas las variables que se van a emplear en el programa.
+                                            tr
+                                                td.table2
+                                                    p Inicio
+                                                td.table2
+                                                    p Marcar el inicio del programa.
+                                            tr
+                                                td.table3
+                                                    p Escriba "Por favor ingrese su nombre"
+                                                td.table3
+                                                    p Presenta un mensaje en la pantalla.
+                                            tr
+                                                td.table2
+                                                    p Lea nombre
+                                                td.table2
+                                                    p Captura información por parte del usuario.
+                                            tr
+                                                td.table3
+                                                    p llamar nueva_línea
+                                                td.table3
+                                                    p Permite pasar a la siguiente línea de la pantalla del usuario.
+                                            tr
+                                                td.table2
+                                                    p Escriba "Bienvenido a LPP", nombre
+                                                td.table2
+                                                    p Presenta mensaje combinando parte textual con parte variable.
+                                            tr
+                                                td.table3
+                                                    p Fin
+                                                td.table3
+                                                    p Marca el final del programa.
+                        hr
+        .list.align-items-start.mt-4
             .list__item
                 .list__item__icon
-                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid  
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
             .list__txt
-                p.mb-0 Compilación
-        .list.align-items-center.mt-3
+                .row
+                    .col-12
+                        p #[b Compilación]
+                        p El proceso de Compilación permite traducir el código fuente de un lenguaje de programación a lenguaje de máquina (código objeto) para que pueda ser ejecutado por la computadora.
+                        p Las computadoras sólo entienden el lenguaje de máquina.
+                        p Dentro de la ejecución del proceso de Compilación, se permite detectar los errores sintácticos (sintaxis: conjunto de normas que regulan la codificación de un programa), también conocidos como errores de compilación.
+                        img.img-fluid(src="assets/images/pages/img7.png", style="max-width: 100%").img-a1
+                        p.mt-3 Para compilar un programa en LPP, seleccionamos del menú Programa la opción Compilar.
+                        img.img-fluid(src="assets/images/pages/img8.png", style="max-width: 100%").img-a1
+                        hr
+        .list.align-items-start.mt-4
             .list__item
                 .list__item__icon
-                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid  
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
             .list__txt
-                p.mb-0 Depuración
-        .list.align-items-center.mt-3
+                .row
+                    .col-12
+                        p #[b Depuración]
+                        p La depuración permite hacer el seguimiento paso a paso de un programa.
+                        p Con la depuración es posible pasar de instrucción en instrucción e ir observando el comportamiento que va teniendo el programa y los valores que van tomando las variables. De esta manera el programador puede encontrar tanto errores de sintaxis como errores de lógica.
+                        p Igualmente, se pueden establecer puntos de interrupción de manera que el programa se ejecuta hasta esa línea de instrucciones y el programador puede ver el contenido de las variables, así como el comportamiento del programa hasta ese punto.
+                        p Para depurar un programa en LPP, se cuenta con una serie de opciones desde el menú Programa.
+                        img.img-fluid(src="assets/images/pages/img9.png", style="max-width: 100%").img-a1
+                        img.img-fluid(src="assets/images/pages/img10.png", style="max-width: 100%").img-a1
+                        hr
+        .list.align-items-start.mt-4
             .list__item
                 .list__item__icon
-                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid  
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
             .list__txt
-                p.mb-0 Ejecución
+                p #[b Ejecución]
+                p La ejecución del programa permite observar su comportamiento de la manera como lo percibirá el usuario final. Para ejecutar un programa en LPP, se selecciona del menú Programa la opción Ejecutar, o se hace click en el botón correr de la barra de herramientas.
+    
+    br#tipos
 
-        p.mt-4 Siga los pasos que se explican para cada proceso en el material:
+    .jumbotron.bg-white.shadow
 
-        .subtitulo-guion.mt-6
+        .subtitulo-guion
             h2 2.2 Tipos de datos
         
-        p Un algoritmo opera con los datos que son expresiones que describen los objetos. Los diferentes tipos de datos determinan su forma de almacenamiento en la memoria y las operaciones que podrá desarrollar.
+        p FAl desarrollar un programa de computador, el programador debe trabajar con diferentes datos, por ejemplo, si el programa necesita mostrar la información de un estudiante, seguramente requerirá de datos como su nombre, edad, género, nota, está Matriculado, entre otros. Cada uno de estos datos son de una naturaleza diferente.
 
-        p Leer sobre los tipos de datos para desarrollar un programa de computador en:
+        .row.justify-content-center.mt-5
+            .col-12.col-md-6
+                .table-responsive
+                    table.table.table-bordered.m-0
+                        thead.thead-dark
+                            tr
+                                td.table1
+                                    p.text-center.text-white.mb-0 #[b Tipo de dato]
+                                td.table1
+                                    p.text-center.text-white.mb-0 #[b Nombre en LPP]
+                                td.table1
+                                    p.text-center.text-white.mb-0 #[b Comentarios]
+                        tbody
+                            tr
+                                td.table3
+                                    p Entero
+                                td.table3
+                                    p Entero
+                                td.table3
+                                    p Números sin decimales.
+                            tr
+                                td.table2
+                                    p Real
+                                td.table2
+                                    p Real
+                                td.table2
+                                    p Números que pueden tener decimales.
+                            tr
+                                td.table3
+                                    p Lógico
+                                td.table3
+                                    p Booleano
+                                td.table3
+                                    p Solo recibe valores de falso y verdadero.
+                            tr
+                                td(rowspan="2").table2
+                                    p Carácter
+                                td.table2
+                                    p Carácter
+                                td.table2
+                                    p Sólo recibe un único carácter, que puede ser una letra, un número o un signo.
+                            tr
+                                td.table3
+                                    p Cadena
+                                td.table3
+                                    p Puede recibir un conjunto de carácteres.
+        
+        img.img-fluid(src="assets/images/pages/img11.png", style="max-width: 100%").img-a
 
-        .subtitulo-guion.mt-6
+        img.img-fluid(src="assets/images/pages/img12.png", style="max-width: 100%").img-a
+
+        p.text-center.mt-5.text-warning #[b Programa de ejemplo]
+
+        img.img-fluid(src="assets/images/pages/img13.png", style="max-width: 100%").img-a
+
+        .row.justify-content-center.mt-5
+            .col-12.col-md-8
+                .table-responsive
+                    table.table.table-bordered.m-0
+                        thead.thead-dark
+                            tr
+                                td.table1
+                                    p.text-center.text-white.mb-0 #[b Sección]
+                                td.table1
+                                    p.text-center.text-white.mb-0 #[b Comentario]
+                        tbody
+                            tr
+                                td.table3
+                                    p A
+                                td.table3
+                                    p Declaración de cada una de las variables empleadas en el programa con su respectivo tipo de dato.
+                            tr
+                                td.table2
+                                    p B
+                                td.table2
+                                    p Lectura o asignación de datos a cada una de las variables empleadas en el programa.
+                            tr
+                                td.table3
+                                    p C
+                                td.table3
+                                    p Escritura o impresión de los datos contenidos en cada una de las variables empleadas en el programa.
+    
+    br#operado
+
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.3 Operadores y expresiones aritméticas
         
         p Los operadores se utilizan en las expresiones e indican las operaciones a efectuar con los operandos.
 
-        p Estudie la diferencia entre operador y expresión aritmética en:
+        .list.align-items-start
+            .list__item
+                .list__item__icon
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
+            .list__txt
+                .row
+                    .col-12
+                        p #[b Los operadores aritméticos]
+                        p La mayoría de los programas de computador requieren realizar cálculos u operaciones que involucran operadores aritméticos, por esta razón, como programadores es necesario conocer cada uno de ellos y la manera como el computador los interpreta para calcular los resultados de una determinada expresión o fórmula.
+                        p ¿Cuál es el resultado de la siguiente expresión?
+                        p #[b 3 + 5 x 2 = _____?]
+                        p la respuesta correcta es #[b 13], pues bien, además de conocer los diferentes operadores aritméticos, también es importantísimo conocer los niveles de prioridad de cada uno de ellos.
+                        p #[b Explicación]
+                        p 5 x 2 = 10
+                        p 3 + 10 = 13
+                        p En el caso de la expresión 3 + 5 x 2, primero se realiza la multiplicación 5 x 2 cuyo resultado es 10 y posteriormente se realiza la operación 3 + 10, dando como resultado final 13.
+                        hr
+        .list.align-items-start.mt-4
+            .list__item
+                .list__item__icon
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
+            .list__txt
+                .row
+                    .col-12
+                        p #[b  Reglas de prioridad en los operadores aritméticos]
+                        p Cuando dos operadores tienen el mismo nivel de prioridad, dentro de una expresión se evalúan de izquierda a derecha.
+                        p En LPP el signo igual (=), se representa mediante una flecha dirigida hacia la variable que recibe el valor, esta flecha está conformada por los carácteres menor que (<) y menos (-) así: <-
+                .row.mt-5
+                    .col-12
+                        .table-responsive
+                            table.table.table-bordered.m-0
+                                thead.thead-dark
+                                    tr
+                                        td.table1
+                                            p.text-center.text-white.mb-0 #[b Prioridad]
+                                        td.table1
+                                            p.text-center.text-white.mb-0 #[b Operador]
+                                        td.table1
+                                            p.text-center.text-white.mb-0 #[b Significado]
+                                        td(colspan="2").table1
+                                            p.text-center.text-white.mb-0 #[b Ejemplo]
+                                tbody
+                                    tr
+                                        td.table3
+                                            p 1
+                                        td.table3
+                                            p ^
+                                        td.table3
+                                            p Exponenciación
+                                        td.table3
+                                            p 4 ^ 2 = 16
+                                        td.table3
+                                            p 3 ^ 3 = 27
+                                    tr
+                                        td(rowspan="2").table2
+                                            p 2
+                                        td.table2
+                                            p *
+                                        td.table2
+                                            p Multiplicación
+                                        td.table2
+                                            p 2 * 4 = 8
+                                        td.table2
+                                            p 7 * 5 = 35
+                                    tr
+                                        td.table2
+                                            p /
+                                        td.table2
+                                            p División
+                                        td.table2
+                                            p 5 / 2 = 2.5
+                                        td.table2
+                                            p 6 / 3 = 2
+                                    tr
+                                        td(rowspan="2").table3
+                                            p 3
+                                        td.table3
+                                            p DIV
+                                        td.table3
+                                            p División entera
+                                        td.table3
+                                            p 5 DIV 2 = 2
+                                        td.table3
+                                            p 7 DIV 4 = 1
+                                    tr
+                                        td.table3
+                                            p MOD
+                                        td.table3
+                                            p Residuo de la División
+                                        td.table3
+                                            p 5 MOD 2 = 1
+                                        td.table3
+                                            p 8 MOD 4 = 0
+                                    tr
+                                        td(rowspan="2").table2
+                                            p 4
+                                        td.table2
+                                            p +
+                                        td.table2
+                                            p Suma
+                                        td.table2
+                                            p 3 + 4 = 7
+                                        td.table2
+                                            p 2 * 9 = 11
+                                    tr
+                                        td.table2
+                                            p -
+                                        td.table2
+                                            p Resta
+                                        td.table2
+                                            p 9 - 5 = 3
+                                        td.table2
+                                            p 7 - 6 = 1
+                .row.justify-content-center.mt-4
+                    .col-6.bg-color2.p-4.rounded.shadow
+                        p.text-white ejemplo, para representar la siguiente expresión: X = 3 + 5
+                        p.text-white.mb-0 En LPP sería: X <- 3 + 5
+                hr
+        .list.align-items-start.mt-4
+            .list__item
+                .list__item__icon
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
+            .list__txt
+                .row
+                    .col-12
+                        p #[b Ejemplos de expresiones aritméticas]
+                        p Cuando el programador desea determinar un orden específico de ejecución en una expresión aritmética, puede emplear los paréntesis para agrupar, de esta manera, las operaciones que se encuentren dentro del paréntesis serán las primeras en ejecutarse.
+                        p Retomando el ejemplo de la expresión:
+                .row
+                    .col-4
+                        p.text-center 3 + 5 x 2 = 13
+                        p.text-center 5 x 2 = 10
+                        p.text-center 3 + 10 = 13
+                    .col-2
+                        p.text-center pero
+                    .col-4
+                        p.text-center #[b ( 3 + 5 )] x 2 = 16
+                        p.text-center #[b ( 3 + 5 )] = 8
+                        p.text-center 8 x 2 = 16
+        .list.align-items-start.mt-4
+            .list__item
+                .list__item__icon
+                    img.img-a1(src="assets/images/pages/v1.svg").img-fluid.mt-1
+            .list__txt
+                .row
+                    .col-12
+                        p #[b Ejemplo, manejando expresiones en un programa]
+                        p #[b Programa No. 3] Manejando expresiones: a un programador le solicitan realizar una aplicación que calcule la nota promedio de un alumno a partir de las 2 notas que tiene en una asignatura.
+                        p Durante el análisis, el programador toma un caso de prueba para descubrir cuál es el procedimiento que debe llevar a cabo. En el caso de prueba toma como la primera nota el valor de 4 y como segunda nota el valor de 3.
+                        img.img-fluid(src="assets/images/pages/img14.png", style="max-width: 100%").img-a
+                        p Durante el análisis, el programador identifica que debe sumar las dos notas y el resultado lo debe dividir entre dos: 4 + 3 = 7 luego 7 / 2 = 3.5
+                        p A partir de este análisis, el programador desarrolla la siguiente aplicación en LPP:
+                        img.img-fluid(src="assets/images/pages/img15.png", style="max-width: 100%").img-a
+                        p Al ejecutar la aplicación ingresando los datos de prueba, el programador obtiene el siguiente resultado:
+                        img.img-fluid(src="assets/images/pages/img16.png", style="max-width: 100%").img-a
+                        p Después de buscar el error, se da cuenta que este se encuentra en la siguiente línea:
+                        img.img-fluid(src="assets/images/pages/img17.png", style="max-width: 100%").img-a
+                        p Se debe recordar las reglas de prioridad y concluir que la primera operación que se está ejecutando es la división, por lo tanto, el programador realiza un ajuste al programa para definir el orden deseado de ejecución de los operadores aritméticos mediante el uso de paréntesis. 3 / 2 = 1.5 y 4 + 1.5 = 5.5
+                        p Al ejecutar nuevamente la aplicación, obtiene el resultado esperado:
+                        img.img-fluid(src="assets/images/pages/img18.png", style="max-width: 100%").img-a
+    
+    br#operado1
 
-        .subtitulo-guion.mt-6
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.4 Operadores relacionales y lógicos  
         
         p El resultado de una operación lógica o relacional es un valor lógico verdadero o falso.
-
         p Analice cómo se emplean los operadores relacionales y lógicos para definir condiciones dentro de un programa:
 
-        .subtitulo-guion.mt-6
+        .position-relative
+            a(href="media/documentos/2.4.operadores_relacionales_logicos.pdf", target="_blank")
+                img.card-img-top(src='assets/images/pages/img19.png').img-fluid
+            .position-absolute(style="bottom: 16px; right: 16px")
+                section.my-5
+                    a(href="media/documentos/2.4.operadores_relacionales_logicos.pdf" target="_blank").media-link
+                        img(src="assets/images/icons/icon_pdf.svg", alt="").media-link-icon
+                        .media-link-title
+                            p #[strong Anexo]. Operadores relacionales y lógicos
+    
+    br#estruc1
+
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.5 Estructuras básicas de programación
         
         p Las estructuras básicas permiten desarrollar algoritmos fáciles de escribir, leer, modificar y comprobar.
-
         p Examine las estructuras secuenciales, condicionales y cíclicas que permiten controlar el flujo lógico en los programas:
 
-        .subtitulo-guion.mt-6
+        .position-relative
+            a(href="media/documentos/2.5.estructuras_basicas_programación.pdf", target="_blank")
+                img.card-img-top(src='assets/images/pages/img20.png').img-fluid
+            .position-absolute(style="bottom: 16px; right: 16px")
+                section.my-5
+                    a(href="media/documentos/2.5.estructuras_basicas_programación.pdf" target="_blank").media-link
+                        img(src="assets/images/icons/icon_pdf.svg", alt="").media-link-icon
+                        .media-link-title
+                            p #[strong Anexo]. Estructuras básicas de programación
+    
+    br#estruc2
+
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.6 Estructuras cíclicas
         
         p Las estructuras cíclicas o de repetición se utilizan para repetir un conjunto de sentencias.
-
         p Lea sobre las estructuras de programación cíclicas, las características y ejemplos:
 
-        .subtitulo-guion.mt-6
+        .position-relative
+            a(href="media/documentos/2.6.estructuras_ciclicas.pdf", target="_blank")
+                img.card-img-top(src='assets/images/pages/img21.png').img-fluid
+            .position-absolute(style="bottom: 16px; right: 16px")
+                section.my-5
+                    a(href="media/documentos/2.6.estructuras_ciclicas.pdf" target="_blank").media-link
+                        img(src="assets/images/icons/icon_pdf.svg", alt="").media-link-icon
+                        .media-link-title
+                            p #[strong Anexo]. Estructuras cíclicas
+    
+    br#organiza
+
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.7 Organización de las estructuras en un programa
         
         p Las estructuras secuenciales y cíclicas pueden ser anidadas e introducidas unas en el interior de otras.
-
         p Revise la explicación en el material:
 
         .row.p-4.bg-color1.rounded
@@ -90,8 +449,21 @@
                                 img(src="assets/images/icons/icon_www.svg", alt="").media-link-icon
                                 .media-link-title
                                     p Programación en: PSeInt
+    
+    br#ejemplo
 
-        .subtitulo-guion.mt-6
+    .jumbotron.bg-white.shadow
+
+        .subtitulo-guion
             h2 2.8 Ejemplo
         
         p Identifique la forma de codificar y ejecutar un programa con diferentes estructuras de programación en el siguiente ejemplo:
+        p Se desea desarrollar una aplicación que lea una cantidad determinada de números y para cada uno indique si se trata de un número primo o no. (Un número primo es aquel que solo es divisible por 1 o por sí mismo).
+        p En el siguiente ejemplo se combinan diferentes estructuras de programación:
+        p Ciclo PARA que recorre desde 1 hasta la cantidad de números leída.
+        p Ciclo Repita que se ejecuta hasta que exista más de 2 divisores o el índice sea mayor que el número.
+        p Estructura condicional SI que evalúa la cantidad de divisores.
+        img.img-fluid(src="assets/images/pages/img22.png", style="max-width: 100%").img-a
+        p El resultado del programa con diferentes estructuras de programación es el siguiente:
+        img.img-fluid(src="assets/images/pages/img23.png", style="max-width: 100%").img-a
+        p De esta manera, podemos observar como las diferentes estructuras de programación se pueden combinar para lograr dar solución a un determinado problema.
