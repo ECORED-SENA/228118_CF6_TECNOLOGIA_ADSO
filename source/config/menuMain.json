@@ -117,6 +117,26 @@
     "slug": "herramientas",
     "title": "3. Herramientas para creación y prueba de algoritmos",
     "breadcrumb": ["Inicio","herramientas"],
-    "path": "pages/4-tema.html"
+    "path": "pages/4-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-play-circle",
+        "slug": "herramientas",
+        "title": "3.1 DFD",
+        "anchor": "dfd"
+      },
+      {
+        "icon": "fa fa-play-circle",
+        "slug": "herramientas",
+        "title": "3.2 Pasos para el diseño de un algoritmo",
+        "anchor": "pasos1"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "herramientas",
+        "title": "3.3 Python",
+        "anchor": "python"
+      }
+    ]
   }
 ]
