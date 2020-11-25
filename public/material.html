@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Lógica Proposicional</title>
+        <meta meta name="description" content="Este material formativo denominado Lógica Proposicional introduce al aprendiz, en las nociones elementales de los algoritmos, estructuras de programación y herramientas que permiten el diálogo del usuario con la máquina, que le permitirán entender el funcionamiento interno de un programa, así como diseñarlos, progresando de manera fácil y constante.">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#ResultadosAprendizaje"><span>Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#IndiceTematico"><span>Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#Creditos"><span>Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">TECNOLOGÍA EN ANÁLISIS Y DESARROLLO DE SOFTWARE</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Lógica proposicional</h1>
+                                <div class="brand-line-primary"></div>
+                                <p class="curso-descripcion">Para escribir un programa, se debe como mínimo seguir los siguientes pasos:</p>
+                                <ol class="curso-descripcion">
+                                    <li>Definición del problema.</li>
+                                    <li>Diseño del algoritmo.</li>
+                                    <li>Transformación del algoritmo en un programa.</li>
+                                    <li>Representación gráfica del algoritmo.</li>
+                                </ol>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li><span>220501093-03 - Desarrollar procesos lógicos a través de la implementación de algoritmos.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Diseño y construcción de algoritmos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-3">Fundamentos de programación estructurada en LPP</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-3">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-4">Herramientas para creación y prueba de algoritmos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-4">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="tema-1">
+                <div class="container" id="intro">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="card shadow"><img class="img-fluid" src="assets/images/pages/img1.png" style="max-width: 100%">
+                        <div class="card-body">
+                            <p>Este material formativo denominado Lógica Proposicional introduce al aprendiz, en las nociones elementales de los algoritmos, estructuras de programación y herramientas que permiten el diálogo del usuario con la máquina, que le permitirán entender el funcionamiento interno de un programa, así como diseñarlos, progresando de manera fácil y constante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="diseno">
+                    <div class="header-ecored">
+                        <h1>1. Diseño y construcción de algoritmos</h1>
+                    </div><br id="conceptos">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>1.1 Conceptos</h2>
+                        </div>
+                        <p>Un algoritmo es una serie de instrucciones, que ejecutadas correctamente obtienen el resultado esperado, la palabra se origina del nombre del matemático Al Khawarizmi.</p>
+                        <p>Para ampliar la información lo invitamos a leer sobre concepto e historia del algoritmo:</p><img class="img-fluid img-a" src="assets/images/pages/img2.png" style="max-width: 40%">
+                    </div><br id="pasos">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>1.2 Pasos para el diseño de un algoritmo</h2>
+                        </div>
+                        <p>Para resolver un problema es necesario seguir un orden:</p>
+                        <div class="list align-items-center">
+                            <div class="list__item">
+                                <div class="list__item__bulletNumber"><span>1</span></div>
+                            </div>
+                            <div class="list__txt">
+                                <p class="mb-0">Analizar el problema.</p>
+                            </div>
+                        </div>
+                        <div class="list align-items-center mt-3">
+                            <div class="list__item">
+                                <div class="list__item__bulletNumber"><span>2</span></div>
+                            </div>
+                            <div class="list__txt">
+                                <p class="mb-0">Diseñar el algoritmo.</p>
+                            </div>
+                        </div>
+                        <div class="list align-items-center mt-3">
+                            <div class="list__item">
+                                <div class="list__item__bulletNumber"><span>3</span></div>
+                            </div>
+                            <div class="list__txt">
+                                <p class="mb-0">Expresar el algoritmo.</p>
+                            </div>
+                        </div>
+                        <div class="list align-items-center mt-3">
+                            <div class="list__item">
+                                <div class="list__item__bulletNumber"><span>4</span></div>
+                            </div>
+                            <div class="list__txt">
+                                <p class="mb-0">Ejecución y validación.</p>
+                            </div>
+                        </div>
+                        <p class="mt-4">En el siguiente material se explican de forma detallada los pasos para el diseño de un algoritmo:</p>
+                        <div class="position-relative"><a href="media/documentos/1.2.pasos_diseño_algoritmo.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img4.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/1.2.pasos_diseno_algoritmo.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Resolución de problemas con algoritmos</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                    </div><br id="repre">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>1.3 Representación de los algoritmos</h2>
+                        </div>
+                        <p>Los algoritmos se representan de dos formas: mediante símbolos en diagramas de flujo y en forma textual denominado pseudocódigo.</p>
+                        <p>Leer acerca de las representaciones de los algoritmos en:</p>
+                        <div class="position-relative"><a href="media/documentos/1.3.representacion_algoritmos.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img5.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/1.3.representacion_algoritmos.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Pasos para el diseño de un algoritmo.</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                    </div><br id="estruc">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>1.4 Estructuras de programación</h2>
+                        </div>
+                        <p>Un algoritmo preciso, definido y finito, se podrá escribir directamente en un lenguaje de programación como Java, C#, PHP, Python, Ruby.</p>
+                        <p>Para comprender sobre las estructuras de programación estudie el siguiente material:</p>
+                        <div class="position-relative"><a href="media/documentos/1.4.estructuras_programacion.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img3.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/1.4.estructuras_programacion.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Estructuras de programación</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                        <div class="header-arrow my-5">
+                            <h3 class="text-center">Estimado estudiante, lo invitamos a leer el siguiente PDF:</h3>
+                        </div>
+                        <div class="row p-4 bg-color1 rounded">
+                            <div class="col-12">
+                                <p>Profundice en la programación estructurada, Capítulo 4, Págs. 55-61: Joyanes Aguilar, L. (2003).</p>
+                                <p>Fundamentos de programación: libro de problemas. Algoritmos, estructuras de datos y objetos (2a. ed.). McGraw-Hill España.</p>
+                                <section>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto"><a class="media-link" href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/50047" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_www.svg" alt="">
+                                                <div class="media-link-title">
+                                                    <p>Biblioteca SENA</p>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-3">
+                <div class="container" id="fundamentos">
+                    <div class="header-ecored">
+                        <h1>2. Fundamentos de programación estructurada en LPP</h1>
+                    </div><br id="primer">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.1 Primer programa</h2>
+                        </div>
+                        <p>Para iniciar con la construcción del primer programa en la herramienta LPP es necesario seguir los siguientes procesos:</p>
+                        <div class="list align-items-start">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Codificación.</b></p>
+                                        <p>La Codificación consiste en pasar el algoritmo al lenguaje de programación seleccionado, en este caso el lenguaje es LPP. El primer programa consiste en leer el nombre de una persona y presentar un mensaje personalizado.</p><img class="img-fluid img-a1" src="assets/images/pages/img6.png" style="max-width: 100%">
+                                        <div class="row justify-content-center mt-5">
+                                            <div class="col-12 col-md-6">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered m-0">
+                                                        <thead class="thead-dark">
+                                                            <tr>
+                                                                <td class="table1">
+                                                                    <p class="text-center text-white mb-0"><b>Linea</b></p>
+                                                                </td>
+                                                                <td class="table1">
+                                                                    <p class="text-center text-white mb-0"><b>Significado</b></p>
+                                                                </td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="table3">
+                                                                    <p>Cadena [20] nombre</p>
+                                                                </td>
+                                                                <td class="table3">
+                                                                    <p>Antes del inicio se deben declarar todas las variables que se van a emplear en el programa.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table2">
+                                                                    <p>Inicio</p>
+                                                                </td>
+                                                                <td class="table2">
+                                                                    <p>Marcar el inicio del programa.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table3">
+                                                                    <p>Escriba "Por favor ingrese su nombre"</p>
+                                                                </td>
+                                                                <td class="table3">
+                                                                    <p>Presenta un mensaje en la pantalla.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table2">
+                                                                    <p>Lea nombre</p>
+                                                                </td>
+                                                                <td class="table2">
+                                                                    <p>Captura información por parte del usuario.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table3">
+                                                                    <p>llamar nueva_línea</p>
+                                                                </td>
+                                                                <td class="table3">
+                                                                    <p>Permite pasar a la siguiente línea de la pantalla del usuario.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table2">
+                                                                    <p>Escriba "Bienvenido a LPP", nombre</p>
+                                                                </td>
+                                                                <td class="table2">
+                                                                    <p>Presenta mensaje combinando parte textual con parte variable.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="table3">
+                                                                    <p>Fin</p>
+                                                                </td>
+                                                                <td class="table3">
+                                                                    <p>Marca el final del programa.</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Compilación</b></p>
+                                        <p>El proceso de compilación permite traducir el código fuente de un lenguaje de programación a lenguaje de máquina (código objeto) para que pueda ser ejecutado por la computadora.</p>
+                                        <p>Las computadoras sólo entienden el lenguaje de máquina.</p>
+                                        <p>Dentro de la ejecución del proceso de compilación, se permite detectar los errores sintácticos (sintaxis: conjunto de normas que regulan la codificación de un programa), también conocidos como errores de compilación.</p><img class="img-fluid img-a1" src="assets/images/pages/img7.png" style="max-width: 100%">
+                                        <p class="mt-3">Para compilar un programa en LPP, seleccionamos del menú Programa la opción Compilar.</p><img class="img-fluid img-a1" src="assets/images/pages/img8.png" style="max-width: 100%">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Depuración</b></p>
+                                        <p>La depuración permite hacer el seguimiento paso a paso de un programa.</p>
+                                        <p>Con la depuración es posible pasar de instrucción en instrucción e ir observando el comportamiento que va teniendo el programa y los valores que van tomando las variables. De esta manera el programador puede encontrar tanto errores de sintaxis como errores de lógica.</p>
+                                        <p>Igualmente, se pueden establecer puntos de interrupción de manera que el programa se ejecuta hasta esa línea de instrucciones y el programador puede ver el contenido de las variables, así como el comportamiento del programa hasta ese punto.</p>
+                                        <p>Para depurar un programa en LPP, se cuenta con una serie de opciones desde el menú Programa.</p><img class="img-fluid img-a1" src="assets/images/pages/img9.png" style="max-width: 100%"><img class="img-fluid img-a1" src="assets/images/pages/img10.png" style="max-width: 100%">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><b>Ejecución</b></p>
+                                <p>La ejecución del programa permite observar su comportamiento de la manera como lo percibirá el usuario final. Para ejecutar un programa en LPP, se selecciona del menú Programa la opción Ejecutar, o se hace clic en el botón correr de la barra de herramientas.</p>
+                            </div>
+                        </div>
+                    </div><br id="tipos">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.2 Tipos de datos</h2>
+                        </div>
+                        <p>Un algoritmo opera con los datos que son expresiones que describen los objetos. Los diferentes tipos de datos determinan su forma de almacenamiento en la memoria y las operaciones que podrá desarrollar.</p>
+                        <p>Leer sobre los tipos de datos para desarrollar un programa de computador en:</p>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-12 col-md-6">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered m-0">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <td class="table1">
+                                                    <p class="text-center text-white mb-0"><b>Tipo de dato</b></p>
+                                                </td>
+                                                <td class="table1">
+                                                    <p class="text-center text-white mb-0"><b>Nombre en LPP</b></p>
+                                                </td>
+                                                <td class="table1">
+                                                    <p class="text-center text-white mb-0"><b>Comentarios</b></p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="table3">
+                                                    <p>Entero</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Entero</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Números sin decimales.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table2">
+                                                    <p>Real</p>
+                                                </td>
+                                                <td class="table2">
+                                                    <p>Real</p>
+                                                </td>
+                                                <td class="table2">
+                                                    <p>Números que pueden tener decimales.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table3">
+                                                    <p>Lógico</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Booleano</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Solo recibe valores de falso y verdadero.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table2" rowspan="2">
+                                                    <p>Carácter</p>
+                                                </td>
+                                                <td class="table2">
+                                                    <p>Carácter</p>
+                                                </td>
+                                                <td class="table2">
+                                                    <p>Sólo recibe un único carácter, que puede ser una letra, un número o un signo.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table3">
+                                                    <p>Cadena</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Puede recibir un conjunto de carácteres.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><img class="img-fluid img-a" src="assets/images/pages/img11.png" style="max-width: 100%"><img class="img-fluid img-a" src="assets/images/pages/img12.png" style="max-width: 100%">
+                        <p class="text-center mt-5 text-warning"><b>Programa de ejemplo</b></p><img class="img-fluid img-a" src="assets/images/pages/img13.png" style="max-width: 100%">
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-12 col-md-8">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered m-0">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <td class="table1">
+                                                    <p class="text-center text-white mb-0"><b>Sección</b></p>
+                                                </td>
+                                                <td class="table1">
+                                                    <p class="text-center text-white mb-0"><b>Comentario</b></p>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="table3">
+                                                    <p>A</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Declaración de cada una de las variables empleadas en el programa con su respectivo tipo de dato.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table2">
+                                                    <p>B</p>
+                                                </td>
+                                                <td class="table2">
+                                                    <p>Lectura o asignación de datos a cada una de las variables empleadas en el programa.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table3">
+                                                    <p>C</p>
+                                                </td>
+                                                <td class="table3">
+                                                    <p>Escritura o impresión de los datos contenidos en cada una de las variables empleadas en el programa.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="operado">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.3 Operadores y expresiones aritméticas</h2>
+                        </div>
+                        <p>Los operadores se utilizan en las expresiones e indican las operaciones a efectuar con los operandos.</p>
+                        <div class="list align-items-start">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Los operadores aritméticos</b></p>
+                                        <p>La mayoría de los programas de computador requieren realizar cálculos u operaciones que involucran operadores aritméticos, por esta razón, como programadores es necesario conocer cada uno de ellos y la manera como el computador los interpreta para calcular los resultados de una determinada expresión o fórmula.</p>
+                                        <p>¿Cuál es el resultado de la siguiente expresión?</p>
+                                        <p><b>3 + 5 x 2 = _____?</b></p>
+                                        <p>la respuesta correcta es <b>13</b>, pues bien, además de conocer los diferentes operadores aritméticos, también es importantísimo conocer los niveles de prioridad de cada uno de ellos.</p>
+                                        <p><b>Explicación</b></p>
+                                        <p>5 x 2 = 10</p>
+                                        <p>3 + 10 = 13</p>
+                                        <p>En el caso de la expresión 3 + 5 x 2, primero se realiza la multiplicación 5 x 2 cuyo resultado es 10 y posteriormente se realiza la operación 3 + 10, dando como resultado final 13.</p>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b> Reglas de prioridad en los operadores aritméticos</b></p>
+                                        <p>Cuando dos operadores tienen el mismo nivel de prioridad, dentro de una expresión se evalúan de izquierda a derecha.</p>
+                                        <p>En LPP el signo igual (=), se representa mediante una flecha dirigida hacia la variable que recibe el valor, esta flecha está conformada por los carácteres menor que (<) y menos (-) así: <-</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered m-0">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <td class="table1">
+                                                            <p class="text-center text-white mb-0"><b>Prioridad</b></p>
+                                                        </td>
+                                                        <td class="table1">
+                                                            <p class="text-center text-white mb-0"><b>Operador</b></p>
+                                                        </td>
+                                                        <td class="table1">
+                                                            <p class="text-center text-white mb-0"><b>Significado</b></p>
+                                                        </td>
+                                                        <td class="table1" colspan="2">
+                                                            <p class="text-center text-white mb-0"><b>Ejemplo</b></p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="table3">
+                                                            <p>1</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>^</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>Exponenciación</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>4 ^ 2 = 16</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>3 ^ 3 = 27</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table2" rowspan="2">
+                                                            <p>2</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>Multiplicación</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>2 * 4 = 8</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>7 * 5 = 35</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table2">
+                                                            <p>/</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>División</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>5 / 2 = 2.5</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>6 / 3 = 2</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table3" rowspan="2">
+                                                            <p>3</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>DIV</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>División entera</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>5 DIV 2 = 2</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>7 DIV 4 = 1</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table3">
+                                                            <p>MOD</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>Residuo de la División</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>5 MOD 2 = 1</p>
+                                                        </td>
+                                                        <td class="table3">
+                                                            <p>8 MOD 4 = 0</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table2" rowspan="2">
+                                                            <p>4</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>+</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>Suma</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>3 + 4 = 7</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>2 * 9 = 11</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table2">
+                                                            <p>-</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>Resta</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>9 - 5 = 3</p>
+                                                        </td>
+                                                        <td class="table2">
+                                                            <p>7 - 6 = 1</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center mt-4">
+                                    <div class="col-6 bg-color2 p-4 rounded shadow">
+                                        <p class="text-white">ejemplo, para representar la siguiente expresión: X = 3 + 5</p>
+                                        <p class="text-white mb-0">En LPP sería: X <- 3 + 5</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Ejemplos de expresiones aritméticas</b></p>
+                                        <p>Cuando el programador desea determinar un orden específico de ejecución en una expresión aritmética, puede emplear los paréntesis para agrupar, de esta manera, las operaciones que se encuentren dentro del paréntesis serán las primeras en ejecutarse.</p>
+                                        <p>Retomando el ejemplo de la expresión:</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p class="text-center">3 + 5 x 2 = 13</p>
+                                        <p class="text-center">5 x 2 = 10</p>
+                                        <p class="text-center">3 + 10 = 13</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="text-center">pero</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="text-center"><b>( 3 + 5 )</b> x 2 = 16</p>
+                                        <p class="text-center"><b>( 3 + 5 )</b> = 8</p>
+                                        <p class="text-center">8 x 2 = 16</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list align-items-start mt-4">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-a1 img-fluid mt-1" src="assets/images/pages/v1.svg"></div>
+                            </div>
+                            <div class="list__txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><b>Ejemplo, manejando expresiones en un programa</b></p>
+                                        <p><b>Programa No. 3</b> Manejando expresiones: a un programador le solicitan realizar una aplicación que calcule la nota promedio de un alumno a partir de las 2 notas que tiene en una asignatura.</p>
+                                        <p>Durante el análisis, el programador toma un caso de prueba para descubrir cuál es el procedimiento que debe llevar a cabo. En el caso de prueba toma como la primera nota el valor de 4 y como segunda nota el valor de 3.</p><img class="img-fluid img-a" src="assets/images/pages/img14.png" style="max-width: 100%">
+                                        <p>Durante el análisis, el programador identifica que debe sumar las dos notas y el resultado lo debe dividir entre dos: 4 + 3 = 7 luego 7 / 2 = 3.5</p>
+                                        <p>A partir de este análisis, el programador desarrolla la siguiente aplicación en LPP:</p><img class="img-fluid img-a" src="assets/images/pages/img15.png" style="max-width: 100%">
+                                        <p>Al ejecutar la aplicación ingresando los datos de prueba, el programador obtiene el siguiente resultado:</p><img class="img-fluid img-a" src="assets/images/pages/img16.png" style="max-width: 100%">
+                                        <p>Se debe recordar las reglas de prioridad y concluir que la primera operación que se está ejecutando es la división, por lo tanto, el programador realiza un ajuste al programa para definir el orden deseado de ejecución de los operadores aritméticos mediante el uso de paréntesis. 3 / 2 = 1.5 y 4 + 1.5 = 5.5</p>
+                                        <p>Después de buscar el error, se da cuenta que este se encuentra en la siguiente línea:</p><img class="img-fluid img-a" src="assets/images/pages/img17.png" style="max-width: 100%">
+                                        <p>Al ejecutar nuevamente la aplicación, obtiene el resultado esperado:</p><img class="img-fluid img-a" src="assets/images/pages/img18.png" style="max-width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="operado1">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.4 Operadores relacionales y lógicos </h2>
+                        </div>
+                        <p>El resultado de una operación lógica o relacional es un valor lógico verdadero o falso.</p>
+                        <p>Analice cómo se emplean los operadores relacionales y lógicos para definir condiciones dentro de un programa:</p>
+                        <div class="position-relative"><a href="media/documentos/2.4.operadores_relacionales_logicos.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img19.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/2.4.operadores_relacionales_logicos.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Operadores relacionales y lógicos</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                    </div><br id="estruc1">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.5 Estructuras básicas de programación</h2>
+                        </div>
+                        <p>Las estructuras básicas permiten desarrollar algoritmos fáciles de escribir, leer, modificar y comprobar.</p>
+                        <p>Examine las estructuras secuenciales, condicionales y cíclicas que permiten controlar el flujo lógico en los programas:</p>
+                        <div class="position-relative"><a href="media/documentos/2.5.estructuras_basicas_programación.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img21.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/2.5.estructuras_basicas_programacion.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Estructuras básicas de programación</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                    </div><br id="estruc2">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.6 Estructuras cíclicas</h2>
+                        </div>
+                        <p>Las estructuras cíclicas o de repetición se utilizan para repetir un conjunto de sentencias.</p>
+                        <p>Lea sobre las estructuras de programación cíclicas, las características y ejemplos:</p>
+                        <div class="position-relative"><a href="media/documentos/2.6.estructuras_ciclicas.pdf" target="_blank"><img class="card-img-top img-fluid" src="assets/images/pages/img20.png"></a>
+                            <div class="position-absolute" style="bottom: 16px; right: 16px">
+                                <section class="my-5"><a class="media-link" href="media/documentos/2.6.estructuras_ciclicas.pdf" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_pdf.svg" alt="">
+                                        <div class="media-link-title">
+                                            <p><strong>Anexo</strong>. Estructuras cíclicas</p>
+                                        </div>
+                                    </a></section>
+                            </div>
+                        </div>
+                    </div><br id="organiza">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.7 Organización de las estructuras en un programa</h2>
+                        </div>
+                        <p>Las estructuras secuenciales y cíclicas pueden ser anidadas e introducidas unas en el interior de otras.</p>
+                        <div class="sub-line">
+                            <h3>Armando el rompecabezas con estructuras de programación</h3>
+                        </div>
+                        <p>Cómo vimos, las estructuras de programación son de tipo secuenciales, condicionales y cíclicas y con estos 3 tipos de estructuras se pueden desarrollar una gran cantidad de aplicaciones de software, la clave está en la organización lógica que se le den a las instrucciones y estructuras para resolver un problema mediante un programa de computador.</p>
+                        <p>La organización de las estructuras en un programa depende exclusivamente del problema que se desea resolver, por lo tanto, es posible tener un programa con una estructura condicional al interior de una estructura cíclica o un ciclo al interior de otro (ciclos anidados), o una estructura cíclica al interior de una condicional y estructuras secuenciales al interior o por fuera de estructuras cíclicas o condicionales. Por esta razón, el desarrollo de un programa es similar a la construcción de un rompecabezas donde cada elemento debe estar en el lugar adecuado para interactuar con los demás elementos y así construir una solución integral a un problema determinado.</p><img class="img-fluid img-a" src="assets/images/pages/img24.png" style="max-width: 100%">
+                    </div>
+                    <div class="row p-4 bg-color1 rounded mx-0 shadow">
+                        <div class="col-12">
+                            <p>Para comprender los ciclos anidados repase los siguientes ejemplos, Págs. 34-36 Castillo Suazo, R. (2001). Programación en LPP. PSeInt</p>
+                            <section>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto"><a class="media-link" href="https://docplayer.es/63199938-Programacion-en-pseint-por-lic-rommel-castillo-suazo-original-para-lpp-implementado-en-pseint-por-alejandro-caro.html" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_www.svg" alt="">
+                                            <div class="media-link-title">
+                                                <p>Programación en: PSeInt</p>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div><br id="ejemplo">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>2.8 Ejemplo</h2>
+                        </div>
+                        <p>Identifique la forma de codificar y ejecutar un programa con diferentes estructuras de programación en el siguiente ejemplo:</p>
+                        <p>Se desea desarrollar una aplicación que lea una cantidad determinada de números y para cada uno indique si se trata de un número primo o no. (Un número primo es aquel que solo es divisible por 1 o por sí mismo).</p>
+                        <p>En el siguiente ejemplo se combinan diferentes estructuras de programación:</p>
+                        <p>Ciclo PARA que recorre desde 1 hasta la cantidad de números leída.</p>
+                        <p>Ciclo Repita que se ejecuta hasta que exista más de 2 divisores o el índice sea mayor que el número.</p>
+                        <p>Estructura condicional SI que evalúa la cantidad de divisores.</p><img class="img-fluid img-a" src="assets/images/pages/img22.png" style="max-width: 100%">
+                        <p>El resultado del programa con diferentes estructuras de programación es el siguiente:</p><img class="img-fluid img-a" src="assets/images/pages/img23.png" style="max-width: 100%">
+                        <p>De esta manera, podemos observar como las diferentes estructuras de programación se pueden combinar para lograr dar solución a un determinado problema.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-4">
+                <div class="container" id="herramientas">
+                    <div class="header-ecored" id="top">
+                        <h1>3. Herramientas para creación y prueba de algoritmos</h1>
+                    </div><br id="dfd">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>3.1 DFD</h2>
+                        </div>
+                        <p>DFD es un editor de diagramas de flujo con el cual puede dar forma gráfica a un algoritmo, ejecutarlo y depurarlo.</p>
+                        <p>Lo invitamos a construir los algoritmos que se proponen en el siguiente laboratorio:</p>
+                        <div class="row mt-5">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="media/programa/FreeDFD.zip" target="_blank">
+                                        <div class="anchorBtn__number">
+                                            <h3>A1</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Anexo 1. Descarga de software DFD</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="media/documentos/Lab_DFD.pdf" target="_blank">
+                                        <div class="anchorBtn__number">
+                                            <h3>A2</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Laboratorio - Construir algoritmos con la herramienta DFD</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C1">
+                                        <div class="anchorBtn__number">
+                                            <h3>V1</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Instalación y uso herramienta DFD</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C2">
+                                        <div class="anchorBtn__number">
+                                            <h3>V2</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso objeto Decisión</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C3">
+                                        <div class="anchorBtn__number">
+                                            <h3>V3</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso objeto ​ciclo Para</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C4">
+                                        <div class="anchorBtn__number">
+                                            <h3>V4</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso objeto ​ciclo Mientras</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C5">
+                                        <div class="anchorBtn__number">
+                                            <h3>V5</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso objeto ​subprogramas ​y variables tipo ​Arreglo</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div><br id="C1">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V1</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Instalación y uso herramienta DFD</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/nYkAhlJCKUg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C2">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V2</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso objeto Decisión</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/3hEqYVEsnCE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C3">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V3</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso objeto ​ciclo Para</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/WhtO9gEI_o8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C4">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V4</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso objeto ​ciclo Mientras</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/VgbshaILhCg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C5">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V5</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso objeto ​subprogramas ​y variables tipo ​Arreglo</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/RTfDSou5wB8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="pasos1">
+                    <div class="jumbotron bg-white shadow" id="top1">
+                        <div class="subtitulo-guion">
+                            <h2>3.2 LPP o PSeint</h2>
+                        </div>
+                        <p>La herramienta LPP emplea pseudocódigo, cuya función principal es que el programador se centre en los aspectos lógicos de la programación, dejando la parte técnica para cuando se vea la sintaxis de un lenguaje de programación verdadero.</p>
+                        <p>Para diseñar, construir e implementar algoritmos expresados en pseudocódigo y aplicar las estructuras de programación, desarrolle los algoritmos del siguiente material:</p>
+                        <div class="row mt-5">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="media/programa/software_lpp.zip" target="_blank">
+                                        <div class="anchorBtn__number">
+                                            <h3>A1</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Anexo 1. Descarga de software LPP</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="media/documentos/Lab_LPP.pdf" target="_blank">
+                                        <div class="anchorBtn__number">
+                                            <h3>A2</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Laboratorio - Fundamentos de programación con LPP</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C6">
+                                        <div class="anchorBtn__number">
+                                            <h3>V1</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Instalando la ​herramienta LPP</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C7">
+                                        <div class="anchorBtn__number">
+                                            <h3>V2</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Conociendo el Entorno</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C8">
+                                        <div class="anchorBtn__number">
+                                            <h3>V3</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso estructura SI</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C9">
+                                        <div class="anchorBtn__number">
+                                            <h3>V4</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso estructura CASO</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C10">
+                                        <div class="anchorBtn__number">
+                                            <h3>V5</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso ciclo Para</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C11">
+                                        <div class="anchorBtn__number">
+                                            <h3>V6</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso ciclo Repita Hasta</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C12">
+                                        <div class="anchorBtn__number">
+                                            <h3>V7</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso de Funciones</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C13">
+                                        <div class="anchorBtn__number">
+                                            <h3>V8</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso de Procedimientos</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C14">
+                                        <div class="anchorBtn__number">
+                                            <h3>V9</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Uso variables tipo Arreglo</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C15">
+                                        <div class="anchorBtn__number">
+                                            <h3>V10</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Ejecutando paso a paso y mostrando valores variables</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div><br id="C6">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V1</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Instalando la ​herramienta LPP</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/TOc52KkZ-4Y" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C7">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V2</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>​Conociendo el Entorno</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/upCRn-D4d_Q" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C8">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V3</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso estructura SI</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/qW1A5Mb7m9A" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C9">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V4</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso estructura CASO</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/I_-C3Y_twnw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C10">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V5</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso ciclo Para</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/RxZxkhYi4IQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C11">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V6</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso ciclo Repita Hasta</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KsT6C06lXfs" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C12">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V7</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso de Funciones</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/oxzADzRsTGI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C13">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V8</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso de Procedimientos</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/xv7QRH4fiyE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C14">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V9</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Uso variables tipo Arreglo</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/de6Yqhghnmg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="C15">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="anchorHeader">
+                            <div class="anchorHeader__number">
+                                <h3>V10</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Ejecutando paso a paso y mostrando valores variables</p>
+                                <div class="anchorHeader__btn"><a href="#top1"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/wGTIG0RoNmo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br id="python">
+                    <div class="jumbotron bg-white shadow">
+                        <div class="subtitulo-guion">
+                            <h2>3.3 Python</h2>
+                        </div>
+                        <p>Python es un software libre, lenguaje orientado a objetos, comprensible y de fácil uso.</p>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/9fNKy9zOPkg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-4 bg-color1 rounded">
+                            <div class="col-12">
+                                <p><b>Consulte la biblioteca digital</b></p>
+                                <p>Leer sobre el proceso de instalación de Python. Capítulo 3, Págs. 25-37. Hinojosa Gutiérrez, Á. (2015). Python paso a paso. RA-MA Editorial.</p>
+                                <p>Analice el paso a paso para comenzar a programar. Capítulo 4, Págs. 39-46. Hinojosa Gutiérrez, Á. (2015). Python paso a paso. RA-MA Editorial.</p>
+                                <p>Realice los ejercicios propuestos. Capítulo 4, Pág. 47 Hinojosa Gutiérrez, Á. (2015). Python paso a paso. RA-MA Editorial.</p>
+                                <section class="mt-4">
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto"><a class="media-link" href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/107213" target="_blank"><img class="media-link-icon" src="assets/images/icons/icon_www.svg" alt="">
+                                                <div class="media-link-title">
+                                                    <p>Biblioteca SENA</p>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p> <strong class="mr-2">Algoritmo:</strong>un grupo finito de operaciones organizadas de manera lógica y ordenada que permite solucionar un determinado problema. Se trata de una serie de instrucciones o reglas establecidas que, por medio de una sucesión de pasos, permiten arribar a un resultado o solución.</p>
+                        <p><strong class="mr-2">Ciclos anidados:</strong>cuando un ciclo se encuentra dentro de otro ciclo.</p>
+                        <p><strong class="mr-2">DFD:</strong>siglas de Diagrama de Flujo de Datos.</p>
+                        <p><strong class="mr-2">LPP:</strong>Lenguaje de Programación para Principiantes.</p>
+                        <p><strong class="mr-2">Pseudocódigo:</strong>se trata de un falso lenguaje, ya que apela a las normas de estructura de un lenguaje de programación aunque se encuentra desarrollado para que pueda ser leído por un ser humano y no interpretado por una máquina.</p>
+                        <p><strong class="mr-2">Python:</strong>es un lenguaje de scripting independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa, desde aplicaciones Windows a servidores de red o incluso, páginas web.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Nombre del documento o material</th>
+                                    <th>Tipo de material</th>
+                                    <th>Enlace del recurso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Joyanes Aguilar, L. (2003). Fundamentos de programación: libro de problemas. Algoritmos, estructuras de datos y objetos (2a. ed.). McGraw-Hill España. Capítulo 4, Págs. 55-61.</td>
+                                    <td>Web</td>
+                                    <td> <a href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/50047" target="_blank"><span class="fa fa-file" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Castillo Suazo, R. (2001). Programación en LPP. PSeInt</td>
+                                    <td>Web</td>
+                                    <td> <a href="https://docplayer.es/63199938-Programacion-en-pseint-por-lic-rommel-castillo-suazo-original-para-lpp-implementado-en-pseint-por-alejandro-caro.html" target="_blank"><span class="fa fa-file" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Hinojosa Gutiérrez, Á. (2015). Python paso a paso. RA-MA Editorial. Capítulo 3, Págs. 25-37 y Capítulo 4, Págs. 39-47</td>
+                                    <td>Web</td>
+                                    <td> <a href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/107213" target="_blank"><span class="fa fa-file" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Corona, M. (2011). Diseño de algoritmos y su codificación en lenguaje C. McGraw-Hill Interamericana. Tomado de:<a class="ml-2" href="http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=345" target="_blank">http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=345</a></p>
+                        <hr>
+                        <p>Definición.DE (2020).Definición de Algoritmo.<a class="ml-2" href="https://definicion.de/algoritmo/" target="_blank">https://definicion.de/algoritmo/</a></p>
+                        <hr>
+                        <p>Definición.DE (2020).Definición de seudocódigo.<a class="ml-2" href="https://definicion.de/pseudocodigo/" target="_blank">https://definicion.de/pseudocodigo/</a></p>
+                        <hr>
+                        <p>Desarrolloweb.com. (2003). Qué es Python.<a class="ml-2" href="https://desarrolloweb.com/articulos/1325.php" target="_blank">https://desarrolloweb.com/articulos/1325.php</a></p>
+                        <hr>
+                        <p>Hinojosa Gutiérrez, Á. (2015). Python paso a paso. RA-MA Editorial.<a class="ml-2" href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/107213" target="_blank">https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/107213</a></p>
+                        <hr>
+                        <p>Rohaut, S. E. F.-, &amp; Ebel, F. (2019). Algoritmia técnica fundamentales de programación ejemplos.<a class="ml-2" href="https://www-eni-training-com.bdigital.sena.edu.co/portal/client/mediabook/home" target="_blank">https://www-eni-training-com.bdigital.sena.edu.co/portal/client/mediabook/home</a></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón</strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro industrial del diseño y la manufactura </span><br><span class="text-small">Regional Santander</span></p>
+                        <p class="footer-texto mb-2"><strong>Maryuri Agudelo Franco</strong><br /><span class="text-small">Diseñadora Instruccional<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Jesús Libardo Acero Cruz</strong><br /><span class="text-small">Diseñadora Instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de diseño y metrología</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                        <p class="footer-texto mb-2"><strong>Julieth Paola Vital López </strong><br /><span class="text-small">Evaluador instruccional<br /></span><span class="text-small">Revisora de estilo<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria y la Comunicación Gráfica</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Leyson Fabian Castaño Perez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto mb-2"> <strong>Adriana Rincón Avendaño</strong><br />
+                            <strong>Camilo Andrés Villamizar Lizcano</strong><br />
+                            <strong>Carlos Julián Ramírez Benítez</strong><br />
+                            <strong>Yazmin Rocio Figueroa Pacheco</strong><br />
+                            <strong>Yenny patricia Ulloa Villamizar</strong><br /><span class="text-small">Diseño web & producción audiovisual<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Edgar Mauricio Cortes</strong><br />
+                            <strong>Jhon Jairo Urueta Alvarez</strong><br /><span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto mb-2"><span class="text-small text-uppercase">Centro industrial del diseño y la manufactura </span><br><span class="text-small">Regional Santander</span></p>
+                        <h4 class="footer-subtitulo-2 mt-4">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"> <strong>Brayan Steven Pinto Diaz</strong><br />
+                            <strong>Edilson Laverde Molina</strong><br />
+                            <strong>Ricardo Alfonso Gonzalez Vargas</strong><br /><span class="text-small">Validación de recursos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO DE COMERCIO Y SERVICIOS</span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>
